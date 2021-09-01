@@ -24,12 +24,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: timeout 20 bash -c 'sleep 5; echo "$(date +%H:%M:%S): job 1 terminated successfully"' &
-
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: timeout
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          timeout 20 bash -c 'sleep 5; echo "$(date +%H:%M:%S): job 1 terminated successfully"' &
+
