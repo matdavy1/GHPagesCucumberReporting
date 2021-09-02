@@ -1,1 +1,1 @@
-# GHPagesCucumberReporting
+# skeleton cucumber
