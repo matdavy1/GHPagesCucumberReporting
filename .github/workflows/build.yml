@@ -15,6 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: run cucumber test
+      - name: run cucumber test 🔧
         run: chmod +x gradlew && ./gradlew test
         continue-on-error: true
+        
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages 
+          folder: build 
