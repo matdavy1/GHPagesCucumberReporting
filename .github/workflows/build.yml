@@ -16,4 +16,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: run cucumber test
-        run: ./gradlew test
+        run: chmod +x gradlew && ./gradlew test
